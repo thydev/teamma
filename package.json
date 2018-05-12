@@ -1,8 +1,8 @@
 {
   "name": "teammanager",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "App 'Team Manager' which manages your team roster and RSVP for a 3 game series",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
