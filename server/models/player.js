@@ -12,6 +12,7 @@ module.exports = (() => {
         position: {
             type: String
         },
+        // Games Status 2: Playing, 1: Not Playing, 0: Undecided
         game1status: {
             type: Number,
             default: 0

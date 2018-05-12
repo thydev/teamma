@@ -56,6 +56,7 @@ module.exports = {
         //         }
         //     });
         const update = req.body;
+        console.log(update);
         const opts = { runValidators: true };
         Player.update({_id: new ObjectId(req.params.id)}, update, opts, function(err, item) {
             if (!err) {
