@@ -1,0 +1,19 @@
+<div class="container border">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Team Name</th>
+        <th>Prefered Position</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of players">
+        <td>{{t.name}}</td>
+        <td>{{t.position}}</td>
+        <td><button (click)="onDelete(t)" class="btn btn-danger">Delete</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

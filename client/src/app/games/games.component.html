@@ -1,0 +1,32 @@
+<div class="container">
+  <button [routerLink]="['/games', 1]" class="btn-link">Game 1</button> | 
+  <button [routerLink]="['/games', 2]" class="btn-link">Game 2</button> | 
+  <button [routerLink]="['/games', 3]" class="btn-link">Game 3</button> 
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Team Name</th>
+              <th colspan="3">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let t of players">
+              <td>{{t.name}}</td>
+              <td><button (click)="onUpdateStatus(t, 2)" 
+                    [ngClass]="{'btn-success': t[gamesNametatus] == 2}"
+                    class="btn btn-default">Playing</button></td>
+              <td><button (click)="onUpdateStatus(t, 1)"
+                    [ngClass]="{'btn-warning': t[gamesNametatus] == 1}"
+                    class="btn btn-default">Not Playing</button></td>
+              <td><button (click)="onUpdateStatus(t, 0)" 
+                    [ngClass]="{'btn-danger': t[gamesNametatus] == 0}"
+                    class="btn btn-default">Undecided</button></td>
+            </tr>
+      
+          </tbody>
+        </table>
+  </div>
+</div>
