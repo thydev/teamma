@@ -11,7 +11,35 @@
       <tr *ngFor="let t of players">
         <td>{{t.name}}</td>
         <td>{{t.position}}</td>
-        <td><button (click)="onDelete(t)" class="btn btn-danger">Delete</button></td>
+        <td><button class="btn btn-danger"
+              data-toggle="modal" data-target="#myModal{{t._id}}"
+              >Delete</button>
+          <!-- The Modal -->
+          <div class="modal" id="myModal{{t._id}}">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Deleting...</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    Are you sure want to delete {{t.name}}?
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button (click)="onDelete(t)" type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+        </td>
       </tr>
 
     </tbody>
