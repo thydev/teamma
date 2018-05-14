@@ -33,7 +33,8 @@ export class GamesComponent implements OnInit {
   }
 
   onUpdateStatus(player, status: Number) {
-    // const item = {this.gamesNametatus : status};
+    // Dynamic property in ts or js ???
+    // const item = {[this.gamesNametatus] : status};
     let item = {};
     if (this.gamesNametatus === 'game1status' ) {
       item = {game1status: status};
@@ -46,7 +47,6 @@ export class GamesComponent implements OnInit {
     const obsItem = this._playerService.update(player._id, item);
     obsItem.subscribe(data => {
       console.log(data);
-      // this.players = data['data'];
       this.getAll();
     });
   }
