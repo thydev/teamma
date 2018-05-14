@@ -3,7 +3,7 @@ const mongoose = require('mongoose'),
         path = require('path');
 
 module.exports = (app) => {
-    const baseUrl = '/players/';
+    const baseUrl = '/api/';
     app.get(baseUrl, (req, res) => {
         players.retrieveAll(req, res);
     })

@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PlayerService {
-  private baseUrl = '/players/';
+  private baseUrl = '/api/';
 
   constructor(
     private _http: HttpClient

@@ -147,11 +147,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _player_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./player.service */ "./src/app/player.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _player_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./player.service */ "./src/app/player.service.ts");
 /* harmony import */ var _players_players_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./players/players.component */ "./src/app/players/players.component.ts");
 /* harmony import */ var _playersadd_playersadd_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./playersadd/playersadd.component */ "./src/app/playersadd/playersadd.component.ts");
 /* harmony import */ var _games_games_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./games/games.component */ "./src/app/games/games.component.ts");
@@ -179,7 +179,7 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
                 _players_players_component__WEBPACK_IMPORTED_MODULE_7__["PlayersComponent"],
                 _playersadd_playersadd_component__WEBPACK_IMPORTED_MODULE_8__["PlayersaddComponent"],
                 _games_games_component__WEBPACK_IMPORTED_MODULE_9__["GamesComponent"],
@@ -187,12 +187,12 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             ],
-            providers: [_player_service__WEBPACK_IMPORTED_MODULE_4__["PlayerService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            providers: [_player_service__WEBPACK_IMPORTED_MODULE_6__["PlayerService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -220,7 +220,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <button [routerLink]=\"['/games', 1]\" class=\"btn btn-link\">Game 1</button> | \n  <button [routerLink]=\"['/games', 2]\" class=\"btn btn-link\">Game 2</button> | \n  <button [routerLink]=\"['/games', 3]\" class=\"btn btn-link\">Game 3</button> \n</div>\n<div class=\"row\">\n  <div class=\"col-md-12\">\n      <table class=\"table table-hover w-75\">\n          <thead>\n            <tr>\n              <th>Team Name</th>\n              <th colspan=\"3\">Actions</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngFor=\"let t of players\">\n              <td>{{t.name}}</td>\n              <td><button (click)=\"onUpdateStatus(t, 2)\" \n                    [ngClass]=\"{'btn-success': t[gamesNametatus] == 2}\"\n                    class=\"btn btn-default\">Playing</button></td>\n              <td><button (click)=\"onUpdateStatus(t, 1)\"\n                    [ngClass]=\"{'btn-warning': t[gamesNametatus] == 1}\"\n                    class=\"btn btn-default\">Not Playing</button></td>\n              <td><button (click)=\"onUpdateStatus(t, 0)\" \n                    [ngClass]=\"{'btn-danger': t[gamesNametatus] == 0}\"\n                    class=\"btn btn-default\">Undecided</button></td>\n            </tr>\n      \n          </tbody>\n        </table>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <button [routerLink]=\"['/games', 1]\" class=\"btn btn-link\">Game 1</button> | \n  <button [routerLink]=\"['/games', 2]\" class=\"btn btn-link\">Game 2</button> | \n  <button [routerLink]=\"['/games', 3]\" class=\"btn btn-link\">Game 3</button> \n</div>\n<div class=\"row\">\n  <div class=\"col-12 text-center\">\n      <table class=\"table table-hover border w-75\">\n          <thead>\n            <tr>\n              <th>Team Name</th>\n              <th colspan=\"3\" class=\"text-center\">Actions</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngFor=\"let t of players\">\n              <td>{{t.name}}</td>\n              <td><button (click)=\"onUpdateStatus(t, 2)\" \n                    [ngClass]=\"{'btn-success': t[gamesNametatus] == 2}\"\n                    class=\"btn btn-secondary\">Playing</button></td>\n              <td><button (click)=\"onUpdateStatus(t, 1)\"\n                    [ngClass]=\"{'btn-warning': t[gamesNametatus] == 1}\"\n                    class=\"btn btn-secondary\">Not Playing</button></td>\n              <td><button (click)=\"onUpdateStatus(t, 0)\" \n                    [ngClass]=\"{'btn-danger': t[gamesNametatus] == 0}\"\n                    class=\"btn btn-secondary\">Undecided</button></td>\n            </tr>\n      \n          </tbody>\n        </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -335,7 +335,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var PlayerService = /** @class */ (function () {
     function PlayerService(_http) {
         this._http = _http;
-        this.baseUrl = '/players/';
+        this.baseUrl = '/api/';
     }
     PlayerService.prototype.getAll = function () {
         return this._http.get(this.baseUrl);
@@ -450,7 +450,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <form class=\"form-horizontal\" (submit)=\"onSubmit()\" >\n    <div class=\"form-group\">\n      <label class=\"control-label col-sm-3\" for=\"email\">Player name:</label>\n      <div class=\"col-sm-9\">\n        <span class=\"text-danger\">*Name must be at least 3 characters in length.</span>\n        <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Enter player name\"\n          required\n          minlength=\"3\"\n          maxlength=\"50\"\n          name=\"name\"\n          [(ngModel)]=\"player.name\"\n          #name=\"ngModel\"\n        />\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"control-label col-sm-3\" for=\"pwd\">Prefered position:</label>\n      <div class=\"col-sm-9\"> \n        <input type=\"text\" class=\"form-control\" id=\"position\" placeholder=\"Enter position\"\n          name=\"position\"\n          [(ngModel)]=\"player.position\"\n        >\n      </div>\n    </div>\n    <div class=\"form-group\"> \n      <div class=\"col-sm-offset-2 col-sm-10\">\n        <button type=\"submit\" class=\"btn btn-success\" \n          [ngClass]=\"{'disabled':!name.valid}\"\n        >Add</button>\n      </div>\n    </div>\n  </form>\n</div>"
+module.exports = "<div class=\"container\">\n  <form class=\"form-horizontal\" (submit)=\"onSubmit()\" >\n    <div class=\"form-group\">\n      <label class=\"control-label col-sm-3\" for=\"email\">Player name:</label>\n      <div class=\"col-sm-9\">\n\n        <!-- <span [hidden]=\"name.valid\" class=\"text-danger\">*Name must be at least 3 characters in length.</span> -->\n\n        <span [hidden]=\"!errors.name || name.valid\"  class=\"text-danger\">*{{errors.name.message}}</span>\n        <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Enter player name\"\n          required\n          minlength=\"3\"\n          maxlength=\"50\"\n          name=\"name\"\n          [(ngModel)]=\"player.name\"\n          #name=\"ngModel\"\n        />\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"control-label col-sm-3\" for=\"pwd\">Prefered position:</label>\n      <div class=\"col-sm-9\"> \n        <input type=\"text\" class=\"form-control\" id=\"position\" placeholder=\"Enter position\"\n          name=\"position\"\n          [(ngModel)]=\"player.position\"\n        >\n      </div>\n    </div>\n    <div class=\"form-group\"> \n      <div class=\"col-sm-offset-2 col-sm-10\">\n        <!-- <button type=\"submit\" class=\"btn btn-primary\" \n          [ngClass]=\"{'disabled':!name.valid}\"\n        >Add BT3</button> -->\n        <button type=\"submit\" class=\"btn btn-primary\" \n          [disabled]=\"!name.valid\"\n        >Add</button>\n\n        <button type=\"submit\" class=\"btn btn-primary\" \n          \n        > Get Backend Validation Errors</button>\n      </div>\n    </div>\n  </form>\n</div>"
 
 /***/ }),
 
@@ -484,6 +484,9 @@ var PlayersaddComponent = /** @class */ (function () {
         this._playerService = _playerService;
         this._router = _router;
         this.message = '';
+        this.errors = {
+            name: ''
+        };
     }
     PlayersaddComponent.prototype.ngOnInit = function () {
         this.player = { name: '', position: '' };
@@ -492,12 +495,24 @@ var PlayersaddComponent = /** @class */ (function () {
         var _this = this;
         var obsItem = this._playerService.addNew(this.player);
         obsItem.subscribe(function (data) {
-            console.log(data);
+            // console.log(data);
             _this.message = data['message'];
             if (data['message'] === 'Success') {
                 _this.message = ': ' + _this.player.name + ' was added!';
                 _this.player = { name: '', position: '' };
+                _this.errors.name = '';
                 _this.goHome();
+            }
+            else {
+                console.log(data['error'].errors);
+                _this.errors = data['error'].errors;
+                // for (const err in data['error'].errors) {
+                //   // console.log(err);
+                //   if (err) {
+                //     this.errors.name = data['error'].errors[err].message;
+                //   }
+                //   // console.log(err);
+                // }
             }
         });
     };
@@ -538,7 +553,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container border\">\n  <table class=\"table table-hover\">\n    <thead>\n      <tr>\n        <th>Team Name</th>\n        <th>Prefered Position</th>\n        <th>Actions</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let t of players\">\n        <td>{{t.name}}</td>\n        <td>{{t.position}}</td>\n        <td><button (click)=\"onDelete(t)\" class=\"btn btn-danger\">Delete</button></td>\n      </tr>\n\n    </tbody>\n  </table>\n</div>"
+module.exports = "<div class=\"container\">\n  <table class=\"table table-hover border\">\n    <thead>\n      <tr>\n        <th>Team Name</th>\n        <th>Prefered Position</th>\n        <th>Actions</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let t of players\">\n        <td>{{t.name}}</td>\n        <td>{{t.position}}</td>\n        <td><button (click)=\"onDelete(t)\" class=\"btn btn-danger\">Delete</button></td>\n      </tr>\n\n    </tbody>\n  </table>\n</div>"
 
 /***/ }),
 
