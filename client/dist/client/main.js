@@ -149,13 +149,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _player_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./player.service */ "./src/app/player.service.ts");
-/* harmony import */ var _players_players_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./players/players.component */ "./src/app/players/players.component.ts");
-/* harmony import */ var _playersadd_playersadd_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./playersadd/playersadd.component */ "./src/app/playersadd/playersadd.component.ts");
-/* harmony import */ var _games_games_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./games/games.component */ "./src/app/games/games.component.ts");
-/* harmony import */ var _playerslist_playerslist_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./playerslist/playerslist.component */ "./src/app/playerslist/playerslist.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _player_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./player.service */ "./src/app/player.service.ts");
+/* harmony import */ var _players_players_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./players/players.component */ "./src/app/players/players.component.ts");
+/* harmony import */ var _playersadd_playersadd_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./playersadd/playersadd.component */ "./src/app/playersadd/playersadd.component.ts");
+/* harmony import */ var _games_games_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./games/games.component */ "./src/app/games/games.component.ts");
+/* harmony import */ var _playerslist_playerslist_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./playerslist/playerslist.component */ "./src/app/playerslist/playerslist.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -173,26 +174,28 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _players_players_component__WEBPACK_IMPORTED_MODULE_7__["PlayersComponent"],
-                _playersadd_playersadd_component__WEBPACK_IMPORTED_MODULE_8__["PlayersaddComponent"],
-                _games_games_component__WEBPACK_IMPORTED_MODULE_9__["GamesComponent"],
-                _playerslist_playerslist_component__WEBPACK_IMPORTED_MODULE_10__["PlayerslistComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _players_players_component__WEBPACK_IMPORTED_MODULE_8__["PlayersComponent"],
+                _playersadd_playersadd_component__WEBPACK_IMPORTED_MODULE_9__["PlayersaddComponent"],
+                _games_games_component__WEBPACK_IMPORTED_MODULE_10__["GamesComponent"],
+                _playerslist_playerslist_component__WEBPACK_IMPORTED_MODULE_11__["PlayerslistComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"].forRoot()
             ],
-            providers: [_player_service__WEBPACK_IMPORTED_MODULE_6__["PlayerService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            providers: [_player_service__WEBPACK_IMPORTED_MODULE_7__["PlayerService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -553,7 +556,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <table class=\"table table-hover border\">\n    <thead>\n      <tr>\n        <th>Team Name</th>\n        <th>Prefered Position</th>\n        <th>Actions</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let t of players\">\n        <td>{{t.name}}</td>\n        <td>{{t.position}}</td>\n        <td><button class=\"btn btn-danger\"\n              data-toggle=\"modal\" data-target=\"#myModal{{t._id}}\"\n              >Delete</button>\n          <!-- The Modal -->\n          <div class=\"modal\" id=\"myModal{{t._id}}\">\n              <div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                \n                  <!-- Modal Header -->\n                  <div class=\"modal-header\">\n                    <h4 class=\"modal-title\">Deleting...</h4>\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                  </div>\n                  \n                  <!-- Modal body -->\n                  <div class=\"modal-body\">\n                    Are you sure want to delete {{t.name}}?\n                  </div>\n                  \n                  <!-- Modal footer -->\n                  <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">No</button>\n                    <button (click)=\"onDelete(t)\" type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Yes</button>\n                  </div>\n                  \n                </div>\n              </div>\n            </div>\n        </td>\n      </tr>\n\n    </tbody>\n  </table>\n</div>"
+module.exports = "<div class=\"container\">\n  <table class=\"table table-hover border\">\n    <thead>\n      <tr>\n        <th>Team Name</th>\n        <th>Prefered Position</th>\n        <th>Actions</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let t of players\">\n        <ng-template #tipContent> \n          <p class=\"text-left\">\n            Game 1: {{gameStatus[t.game1status]}} <br>\n            Game 2: {{gameStatus[t.game2status]}} <br>\n            Game 3: {{gameStatus[t.game3status]}}</p>\n        </ng-template>\n        <td><span\n          placement=\"right\" [ngbTooltip]=\"tipContent\">{{t.name}}</span></td>\n        <td>{{t.position}}</td>\n        <td><button class=\"btn btn-danger\"\n              (click)=\"onDelete(t, content)\" \n              >Delete</button>\n        </td>\n      </tr>\n\n    </tbody>\n  </table>\n</div>\n\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\n    <div class=\"modal-header\">\n      <h4 class=\"modal-title text-danger\">Deleting...</h4>\n      <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n    </div>\n    <div class=\"modal-body\">\n      <p> Are you sure you want to delete <span class=\"text-danger\">{{playerToDelete.name}}</span>?</p>\n    </div>\n    <div class=\"modal-footer\">\n      <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('Close click')\">No</button>\n      <button type=\"button\" class=\"btn btn-danger\" (click)=\"c('confirmYes')\">Yes</button>\n    </div>\n  </ng-template>\n  \n  <!-- <button class=\"btn btn-lg btn-outline-primary\" (click)=\"open(content)\">Launch demo modal</button> -->\n  \n  <!-- <hr> -->\n  \n  <!-- <pre>{{closeResult}}</pre> -->"
 
 /***/ }),
 
@@ -568,7 +571,8 @@ module.exports = "<div class=\"container\">\n  <table class=\"table table-hover 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlayerslistComponent", function() { return PlayerslistComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _player_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../player.service */ "./src/app/player.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var _player_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../player.service */ "./src/app/player.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -580,9 +584,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var PlayerslistComponent = /** @class */ (function () {
-    function PlayerslistComponent(_playerService) {
+    function PlayerslistComponent(_playerService, modalService) {
         this._playerService = _playerService;
+        this.modalService = modalService;
+        this.gameStatus = ['Undecided', 'Not Playing', 'Playing'];
     }
     PlayerslistComponent.prototype.ngOnInit = function () {
         this.getAll();
@@ -594,19 +601,49 @@ var PlayerslistComponent = /** @class */ (function () {
             _this.players = data['data'];
         });
     };
-    PlayerslistComponent.prototype.onDelete = function (item) {
+    PlayerslistComponent.prototype.onDelete = function (item, content) {
+        this.playerToDelete = item;
+        this.open(content);
+        // if (confirm(`Are you sure want to delete ${item.name} ?`)) {
+        //   console.log('yes');
+        //   console.log(item);
+        //   const obsItem = this._playerService.delete(item._id);
+        //   obsItem.subscribe(data => {
+        //     console.log(data);
+        //     this.getAll();
+        //   });
+        // } else {
+        //   console.log('no');
+        // }
+    };
+    PlayerslistComponent.prototype.onDeleteYes = function (item) {
         var _this = this;
-        if (confirm("Are you sure want to delete " + item.name + " ?")) {
-            console.log('yes');
-            console.log(item);
-            var obsItem = this._playerService.delete(item._id);
-            obsItem.subscribe(function (data) {
-                console.log(data);
-                _this.getAll();
-            });
+        var obsItem = this._playerService.delete(item._id);
+        obsItem.subscribe(function (data) {
+            console.log(data);
+            _this.getAll();
+        });
+    };
+    PlayerslistComponent.prototype.open = function (content) {
+        var _this = this;
+        this.modalService.open(content, { centered: true }).result.then(function (result) {
+            _this.closeResult = "Closed with: " + result;
+            if (result === 'confirmYes') {
+                _this.onDeleteYes(_this.playerToDelete);
+            }
+        }, function (reason) {
+            _this.closeResult = "Dismissed " + _this.getDismissReason(reason);
+        });
+    };
+    PlayerslistComponent.prototype.getDismissReason = function (reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
         }
         else {
-            console.log('no');
+            return "with: " + reason;
         }
     };
     PlayerslistComponent = __decorate([
@@ -615,7 +652,8 @@ var PlayerslistComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./playerslist.component.html */ "./src/app/playerslist/playerslist.component.html"),
             styles: [__webpack_require__(/*! ./playerslist.component.css */ "./src/app/playerslist/playerslist.component.css")]
         }),
-        __metadata("design:paramtypes", [_player_service__WEBPACK_IMPORTED_MODULE_1__["PlayerService"]])
+        __metadata("design:paramtypes", [_player_service__WEBPACK_IMPORTED_MODULE_2__["PlayerService"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"]])
     ], PlayerslistComponent);
     return PlayerslistComponent;
 }());
